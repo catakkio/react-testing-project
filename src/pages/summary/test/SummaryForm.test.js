@@ -5,10 +5,9 @@ import SummaryForm from '../SummaryForm';
 const btnName = /confirm order/i
 const checkboxName = /terms and conditions/i
 
-let btn, checkbox, user;
+let btn, checkbox;
 
 beforeEach(() => {
-    user = userEvent.setup()
     render(<SummaryForm />)
     btn = screen.getByRole('button', { name: btnName })
     checkbox = screen.getByRole('checkbox', { name: checkboxName })
@@ -23,25 +22,29 @@ it('Initial condition', () => {
 // it('Checkbox behavior', () => { I wrote 'checkbox behavior', but is too generic? Maybe is better to explain better the behavior
 it('Checkbox enables btn on 1st click and disables on 2nd click', async () => {
     // Checking checkbox enables button
-    await userEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(btn).toBeEnabled();
 
     //Unchecking checkbox disables button
-    await userEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(btn).toBeDisabled();
 })
 
-xit("Checkbox enables button on first click and disables on second click", async () => {
-    // const user = userEvent.setup(); // THIS LINE
-    render(<SummaryForm />);
-    const checkbox = screen.getByRole("checkbox", {
-        name: /terms and conditions/i,
-    });
-    const confirmButton = screen.getByRole("button", { name: /confirm order/i });
+it('popover responds to hover', () => {
+    const popoverText = /no ice cream will actually be delivered/i
+    const nullPopover = screen.queryByText(popoverText)
+    expect(nullPopover).toBe(null)
 
-    await userEvent.click(checkbox);
-    expect(confirmButton).toBeEnabled();
+    const termsAndConditions = screen.getByText(/terms and conditions/i)
+    userEvent.hover(termsAndConditions);
 
-    await userEvent.click(checkbox);
-    expect(confirmButton).toBeDisabled();
-});
+    const popover = screen.getByText(popoverText)
+    /**
+     * using getBy, if we weren't able to find the elment, an error would be thrown. 
+     * So the next line, could seems uncessary,but for redability is better to include it
+    */
+    expect(popover).not.toBe(null)
+
+    const nullPopoverAgain = screen.queryByText(popoverText);
+    expect(nullPopoverAgain).toBe(null)
+})

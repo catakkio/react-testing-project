@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, FormGroup } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
 export default function SummaryForm() {
     const [termsAndConditionChecked, setTermsAndConditionChecked] = useState(false)
@@ -21,6 +21,8 @@ export default function SummaryForm() {
                     label={checkboxLabel}
                 />
             </Form.Group>
+
+            {/* <Popover.Body>No ice cream will actually be delivered</Popover.Body> */}
 
             <Button type="submit" disabled={!termsAndConditionChecked}>
                 Confirm order
