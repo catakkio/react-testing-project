@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
   Button, Form, OverlayTrigger, Popover,
-} from 'react-bootstrap';
+} from 'react-bootstrap'
 
 export default function SummaryForm() {
-  const [termsAndConditionChecked, setTermsAndConditionChecked] = useState(false);
+  const [termsAndConditionChecked, setTermsAndConditionChecked] = useState(false)
 
-  const toggleTermsAndConditions = () => setTermsAndConditionChecked(!termsAndConditionChecked);
+  const toggleTermsAndConditions = () => setTermsAndConditionChecked(!termsAndConditionChecked)
 
   const popover = (
     <Popover id="tc-popover">
@@ -14,7 +14,7 @@ export default function SummaryForm() {
         No ice cream will actually be delivered
       </Popover.Body>
     </Popover>
-  );
+  )
 
   const checkboxLabel = (
     <span>
@@ -23,7 +23,7 @@ export default function SummaryForm() {
         <span style={{ color: 'blue' }}> Terms and Conditions </span>
       </OverlayTrigger>
     </span>
-  );
+  )
 
   return (
     <Form>
@@ -40,5 +40,5 @@ export default function SummaryForm() {
         Confirm order
       </Button>
     </Form>
-  );
+  )
 }

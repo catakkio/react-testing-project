@@ -19,6 +19,23 @@ module.exports = {
   plugins: [
     'react',
   ],
+
   rules: {
+
+    'linebreak-style': [
+      'error',
+      'unix',
+    ],
+    quotes: [
+      'error',
+      'single',
+    ],
+    semi: [
+      'error',
+      'never',
+    ],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'import/prefer-default-export': 'off',
   },
-};
+}

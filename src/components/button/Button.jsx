@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export function replaceCamelWithSpaces(colorName) {
-  return colorName.replace(/\B([A-Z])\B/g, ' $1');
+  return colorName.replace(/\B([A-Z])\B/g, ' $1')
 }
 
 function Button() {
-  const [buttonColor, setButtonColor] = useState('MediumVioletRed');
-  const [disabled, setDisabled] = useState(false);
+  const [buttonColor, setButtonColor] = useState('MediumVioletRed')
+  const [disabled, setDisabled] = useState(false)
 
-  const newButtonColor = buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
+  const newButtonColor = buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed'
 
   return (
     <div>
@@ -36,7 +36,7 @@ function Button() {
         />
       </label>
     </div>
-  );
+  )
 }
 
-export default Button;
+export default Button

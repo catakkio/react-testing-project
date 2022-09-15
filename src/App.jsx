@@ -1,5 +1,5 @@
-import Button from './components/button/Button';
-import OrderSummary from './pages/summary/OrderSummary';
+import Button from './components/button/Button'
+import OrderSummary from './pages/summary/OrderSummary'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <hr />
       <OrderSummary />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

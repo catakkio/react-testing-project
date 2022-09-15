@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 function App() {
-  const [btnColor, setBtnColor] = useState('red');
-  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [btnColor, setBtnColor] = useState('red')
+  const [btnDisabled, setBtnDisabled] = useState(false)
 
-  const newBtnColor = btnColor === 'red' ? 'blue' : 'red';
-  const changeBtnColor = () => setBtnColor(newBtnColor);
+  const newBtnColor = btnColor === 'red' ? 'blue' : 'red'
+  const changeBtnColor = () => setBtnColor(newBtnColor)
 
-  const btnBackground = btnColor && btnDisabled ? 'grey' : btnColor;
+  const btnBackground = btnColor && btnDisabled ? 'grey' : btnColor
   return (
     <>
       <button
@@ -30,7 +30,7 @@ function App() {
       />
       {/* <label htmlFor="disable-btn-checkbox"> Disable btn </label> */}
     </>
-  );
+  )
 }
 
-export default App;
+export default App

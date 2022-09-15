@@ -1,1 +1,1 @@
-test('button has correct initial color', () => { });
+test('button has correct initial color', () => { })
