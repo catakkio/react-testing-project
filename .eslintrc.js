@@ -6,36 +6,25 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:testing-library/react',
     'airbnb',
     'plugin:react/jsx-runtime',
     'eslint:recommended',
   ],
-  overrides: [
-  ],
+  plugins: ['react', 'testing-library', 'jest-dom'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
-
   rules: {
-
-    'linebreak-style': [
-      'error',
-      'unix',
-    ],
-    quotes: [
-      'error',
-      'single',
-    ],
-    semi: [
-      'error',
-      'never',
-    ],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'import/prefer-default-export': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'comma-dangle': 'off',
   },
-}
+};
