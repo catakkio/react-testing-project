@@ -1,12 +1,14 @@
-import Options from '../entry/Options'
+import OrderEntry from '../entry/OrderEntry'
 import SummaryForm from './SummaryForm'
 
 export default function OrderSummary() {
   return (
     <>
+      <h5>Form with tooltip:</h5>
       <SummaryForm />
-      <hr />
-      <Options />
+
+      <h5>Order entry</h5>
+      <OrderEntry />
     </>
   )
 }

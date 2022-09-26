@@ -3,11 +3,13 @@ import OrderSummary from './pages/summary/OrderSummary'
 
 function App() {
   return (
-    <>
+    <div className='container'>
+      <h2>Button test:</h2>
       <Button />
-      <hr />
+
+      <h2 className='pt-5'>Order summary test:</h2>
       <OrderSummary />
-    </>
+    </div>
   )
 }
 

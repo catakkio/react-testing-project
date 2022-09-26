@@ -2,7 +2,7 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 
 // eslint-disable-next-line react/prop-types
-export default function ToppingOptions({ name, imagePath }) {
+export default function ToppingOption({ name, imagePath }) {
   return (
     <Col xs={12} sm={6} md={4} lg={3}>
       <img

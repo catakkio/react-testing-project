@@ -18,13 +18,17 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
     semi: ['error', 'never'],
+    quotes: ['error', 'single'],
+    'linebreak-style': ['error', 'unix'],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'import/prefer-default-export': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'comma-dangle': 'off',
+    'react/prop-types': 'off',
+    'no-unused-vars': 'warn',
+    'jsx-quotes': 'off',
+    'no-debugger': 'warn'
   },
-};
+}
